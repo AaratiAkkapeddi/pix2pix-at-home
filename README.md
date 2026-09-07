@@ -1,25 +1,25 @@
 
-# put your B folder of images in the 'data' folder
+## put your B folder of images in the 'data' folder
 
-# Generate an "A" dataset from your B folder of images by running this edge detection script...
+## Generate an "A" dataset from your B folder of images by running this edge detection script...
 
 ```bash
 pip install opencv-python-headless
   # preview a few first to tune thresholds
 python scripts/generate_edges.py --input data/B --output data/A  --limit 10
 ```
-# You can update the threshold by adding these flags
+## You can update the threshold by adding these flags
 `--low-threshold` and  `--high-threshold`  
 example:
 ```bash
 python scripts/generate_edges.py --input data/B --output data/A  --low-threshold 30 --high-threshold 100 --limit 10
 ```
-# when it looks good run the full batch (if you ended up using the threshold flags, make sure to add them below too):
+## when it looks good run the full batch (if you ended up using the threshold flags, make sure to add them below too):
 ```bash
 python scripts/generate_edges.py --input path/to/B/folder --output path/to/A/folder
 ```
 
-# pix2pix — local training on Apple Silicon Macs
+# pix2pix — local training on Apple Silicon Mac
 
 trains a pix2pix image-to-image model on your own paired
 A/B image folders and exports a `.pict` file
