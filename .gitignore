@@ -1,0 +1,13 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+vendor/
+data/
+checkpoints/
+export/
+models/
+
+config.env
+.DS_Store

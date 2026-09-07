@@ -1,0 +1,17 @@
+# TensorFlow 2.x — DO NOT pin to 1.15, there is no Apple Silicon wheel for it.
+# The vendored pix2pix code is patched (see scripts/apply_patches.sh) to run
+# its TF1 graph-mode code through tf.compat.v1 on top of this.
+tensorflow>=2.13,<2.16
+
+# TF1-era code in the vendored repo is not NumPy-2.0-safe. Keep this pinned.
+numpy<2
+
+Pillow>=10.0
+python-dotenv>=1.0
+
+# Only used by the optional preview step in combine_pairs.py --preview
+matplotlib>=3.7
+
+# Optional GPU acceleration on Apple Silicon. Genuinely optional, and can be
+# unstable with this codebase's old graph-mode ops — see README Troubleshooting.
+# tensorflow-metal
