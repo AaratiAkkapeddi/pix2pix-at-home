@@ -2,11 +2,13 @@
 ## put your B folder of images in the 'data' folder
 
 
+
 ## Crop B images to centered squares and optionally add horizontally flipped copies.
 
 ```bash
      python scripts/square_flip.py --input data/B --output data/B_processed  --flip
 ```
+
 ## Generate an "A" dataset from your B folder of images by running this edge detection script...
 
 ```bash
