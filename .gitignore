@@ -4,10 +4,10 @@ __pycache__/
 *.pyc
 
 vendor/
-data/
-checkpoints/
-export/
-models/
+data/*
+checkpoints/*
+export/*
+models/*
 
-config.env
+
 .DS_Store
